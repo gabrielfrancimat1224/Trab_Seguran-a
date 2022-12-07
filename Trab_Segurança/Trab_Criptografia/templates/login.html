@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>F4Tools Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"><link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+	<div class="container">
+		<div class="screen">
+			<div class="screen__content">
+				<form class="login" action="/login" method="post">
+					<div class="login__field">
+						<input type="text" class="login__input" placeholder="Username / Email" name="username" value="{{request.form.username }}">
+					</div>
+					<div class="login__field">
+						<input type="password" class="login__input" placeholder="Password" name="password" value="{{request.form.password }}">
+					</div>
+					<button class="button login__submit">
+						<span class="button__text">Login</span>
+					</button>				
+				</form>
+
+			</div>
+			<div class="screen__background">
+				<span class="screen__background__shape screen__background__shape4"></span>
+				<span class="screen__background__shape screen__background__shape3"></span>		
+				<span class="screen__background__shape screen__background__shape2"></span>
+				<span class="screen__background__shape screen__background__shape1"></span>
+			</div>		
+		</div>
+	</div>
+</body>
+</html>
